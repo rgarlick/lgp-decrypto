@@ -5,6 +5,7 @@
 #include <fstream>
 #include <sstream>
 #include <algorithm>
+#include "zkd/headers/z340.h"
 
 Cipher::Cipher(string ciphertext) : ciphertext(ciphertext), readError(false), rows(vector<string>())
 { }
@@ -125,10 +126,10 @@ void Cipher::initSize()
 
 int Cipher::getHomophonicFitness() const
 {
-	return 0;
 	writeToFile("dat.txt");
-	string call = "./zkdecrypto-lite dat.txt -t 3";
-	return system(call.c_str());
+	int ret = zkd_main(-1, 2, getCiphertext().c_str());
+	cout << "Obtained " << ret << endl;
+	return ret;
 }
 
 void Cipher::writeToFile(string filename) const

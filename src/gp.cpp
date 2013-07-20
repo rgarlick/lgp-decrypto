@@ -3,7 +3,6 @@
 #include "population.h"
 #include "machine.h"
 #include "cipher.h"
-#include <boost/concept_check.hpp>
 
 using namespace std;
 
@@ -68,7 +67,7 @@ int main(int argc, char** argv)
 	if (maxGenerations < 0 && convergenceLimit < 0) maxGenerations = 1000;
 				
 	//Start the actual algorithm
-	Population *population = new Population(1000, cipher->getSize());
+	Population *population = new Population(100, cipher->getSize());
 	cout << "Population of size " << population->individuals->size() << endl;
 	population->setCipherSize(cipher->getSize());
 	int fittestGeneration = 0;

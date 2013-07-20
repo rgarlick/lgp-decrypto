@@ -34,6 +34,6 @@ const int ELITISM_PERCENTAGE = 2;
 const int MUTATION_PROBABILITY = 50;
 const int PROGRAM_LENGTH = 15;
 
-const int NUM_THREADS = 4;
+const int NUM_THREADS = 1;
 
 #endif

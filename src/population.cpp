@@ -1,7 +1,6 @@
 #include "population.h"
 #include "individual.h"
 #include "cipher.h"
-#include <boost/concept_check.hpp>
 
 /// Creates a population with size individuals, assigns parameters from
 /// global constants.
