@@ -6,3 +6,5 @@ CMakeFiles/
 *.kdev4
 Makefile
 cmake_install.cmake
+*.h~
+*.cpp~
