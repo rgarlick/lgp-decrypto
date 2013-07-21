@@ -96,7 +96,7 @@ void Population::switchGenerations()
 {
 	cout << "Trying to evolve " << endl;
     vector<shared_ptr<Individual>> * nextGeneration = new vector<shared_ptr<Individual>>;
-    for (size_t i = 0; i < individuals->size() / (100 / ELITISM_PERCENTAGE); i++)
+    for (size_t i = 0; i < (individuals->size() / 100) * ELITISM_PERCENTAGE; i++)
     {
         nextGeneration->push_back(individuals->at(i));
     }
