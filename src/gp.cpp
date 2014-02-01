@@ -29,6 +29,8 @@ Machine* machine;
 
 void cipherTest();
 
+class HomophonicSolver;
+
 int main(int argc, char** argv)
 {
 	srand(time(nullptr));
@@ -37,6 +39,13 @@ int main(int argc, char** argv)
 		cout << "Specify the file name!" << endl;
 		return 0;
 	}
+	
+	/*std::string str = "9%P/Z/UB%kOR=pX=BWV+eGYF69HP@K!qYeMJY^UIk7qTtNQYD5)S(/9#BPORAU%fRlqEk^LMZJdr\\pFHVWe8Y@+qGD9KI)6qX85zS(RNtIYElO8qGBTQS#BLd/P#B@XqEHMU^RRkcZKqpI)Wq!85LMr9#BPDR+j=6\\N(eEUHkFZcpOVWI5+tL)l^R6H";
+	Init(str);
+	Solve();
+	
+	return 0;*/
+	
 	Cipher *cipher = new Cipher();
         cipher->loadFromFile(argv[1]);
         

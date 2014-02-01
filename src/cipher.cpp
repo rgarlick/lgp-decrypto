@@ -24,7 +24,9 @@
 #include <fstream>
 #include <sstream>
 #include <algorithm>
-#include "zkd/headers/z340.h"
+
+void Init(std::string& ciphertext);
+int Solve();
 
 Cipher::Cipher(string ciphertext) : ciphertext(ciphertext), readError(false), rows(vector<string>())
 { }
@@ -145,10 +147,10 @@ void Cipher::initSize()
 
 int Cipher::getHomophonicFitness() const
 {
-	writeToFile("dat.txt");
-	int ret = zkd_main(-1, 2, getCiphertext().c_str());
-	cout << "Obtained " << ret << endl;
-	return ret;
+	return (rand() * 10000 % 10);
+	string s = getCiphertext();
+	Init(s);
+	return Solve();
 }
 
 void Cipher::writeToFile(string filename) const
